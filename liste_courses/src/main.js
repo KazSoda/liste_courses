@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector("input[type='search']");
   const triSelect = document.getElementById("tri");
   const resetButton = document.querySelector("button");
+  const compteurProduits = document.getElementById("compteur-produits");
 
   function afficherProduits(produits) {
       ul.innerHTML = "";
@@ -19,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
           `;
           ul.appendChild(li);
       });
+      // Mise à jour du compteur
+      compteurProduits.textContent = `${produits.length} produits`;
   }
 
   fetch("../public/liste_produits_quotidien.json")

@@ -13,19 +13,21 @@
       <h2>COURSESAPP</h2>
       <a href="liste.html">Ma liste de courses</a>
     </header>
-    <div>
-      <h1>Produits disponibles</h1>
-      <span id="compteur-produits"></span>
-    </div>
-    <div>
-      <input type="search" placeholder="Rechercher un produit...">
-      <select id="tri">
-        <option value=""></option>
-        <option value="nom">Nom</option>
-        <option value="prix">Prix</option>
-      </select>
-      <button>RÉINITIALISER</button>
-    </div>
+    <section class="barre_de_tri">
+      <article class="titre_produits">
+        <h1>Produits disponibles :</h1>
+        <span id="compteur-produits"></span>
+      </article>
+      <article>
+        <input type="search" placeholder="Rechercher un produit...">
+        <select id="tri">
+          <option value="">Trier par</option>
+          <option value="nom">Nom</option>
+          <option value="prix">Prix</option>
+        </select>
+        <button>RÉINITIALISER</button>
+      </article>
+    </section>
     <ul id="liste-produits">
     </ul>
   </body>
