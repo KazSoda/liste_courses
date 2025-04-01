@@ -1,4 +1,4 @@
-import './style.css'
+import './main.css'
 
 document.addEventListener("DOMContentLoaded", function () {
   let produitsData = [];
@@ -18,9 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
               <p>Prix : ${produit.prix_unitaire.toFixed(2)} €</p>
               <button class="ajouter">AJOUTER A LA LISTE</button>
           `;
+          li.querySelector(".ajouter").addEventListener("click", function () {
+              ajouterAlaListe(produit);
+          });
           ul.appendChild(li);
       });
-      // Mise à jour du compteur
       compteurProduits.textContent = `${produits.length} produits`;
   }
 
@@ -56,4 +58,15 @@ document.addEventListener("DOMContentLoaded", function () {
       triSelect.value = "";
       afficherProduits(produitsData);
   });
+
+  function ajouterAlaListe(produit) {
+      let listeCourses = JSON.parse(localStorage.getItem("listeCourses")) || [];
+
+      let produitExistant = listeCourses.find(p => p.nom === produit.nom);
+      if (!produitExistant) {
+          listeCourses.push({ ...produit, quantite: 1 });
+      }
+
+      localStorage.setItem("listeCourses", JSON.stringify(listeCourses));
+  }
 });

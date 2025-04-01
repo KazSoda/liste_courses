@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="src/liste.js"></script>
     <title>Vite App</title>
   </head>
   <body>
@@ -11,7 +12,7 @@
       <h2>COURSESAPP</h2>
       <a href="index.html">Produits disponibles</a>
     </header>
-    <h2>Ma liste de courses</h2>
+    <h2 class="courses_titre">Ma liste de courses</h2>
     <table>
       <thead>
         <td>Produit</td>
@@ -21,14 +22,6 @@
         <td>Action</td>
       </thead>
       <tbody id="liste-course-body">
-        <!--EXEMPLE TYPE-->
-        <tr>
-          <td>Nom</td>
-          <td>Prix</td>
-          <td><input type="number" id="data-test"></td>
-          <td>Sous total</td>
-          <td><button id="data-delete">Supprimer</button></td>
-        </tr>
       </tbody>
     </table>
     <p id="total-general">TOTAL :</p>
