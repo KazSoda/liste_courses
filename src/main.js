@@ -76,4 +76,3 @@ export function ajouterAlaListe(produit) {
     localStorage.setItem("listeCourses", JSON.stringify(listeCourses));
     return listeCourses;
 }
-

@@ -55,6 +55,7 @@ export function  calculerTotal() {
 
 document.addEventListener("DOMContentLoaded", function  () {
     const boutonVider = document.getElementById("vider-liste");
+
     boutonVider.addEventListener("click", viderListe);
     chargerListe();
 });
